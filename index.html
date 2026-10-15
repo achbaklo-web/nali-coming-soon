@@ -12,7 +12,26 @@
     @font-face {
       font-family: 'Zaslia';
       src: local('Zaslia'),
-           url('assets/fonts/Zaslia.otf') format('opentype');
+           url('assets/fonts/Zaslia.otf') format('opentype'),
+           url('/assets/fonts/Zaslia.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Rollandio';
+      src: local('Rollandio'),
+           url('assets/nali/fonts/Rollandio.ttf') format('truetype'),
+           url('/assets/nali/fonts/Rollandio.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'MADESAONARA';
+      src: local('MADESAONARA'),
+           url('assets/nali/fonts/MADESAONARA.otf') format('opentype'),
+           url('/assets/nali/fonts/MADESAONARA.otf') format('opentype');
       font-weight: normal;
       font-style: normal;
       font-display: swap;
@@ -59,7 +78,7 @@
       box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
     }
 
-    /* Full-height viewport fallback for mobile/narrow screens */
+    /* Full-height viewport fallback for smaller screens */
     @media (max-aspect-ratio: 1440/703) {
       .artboard-canvas {
         width: 100vw;
@@ -82,7 +101,7 @@
       display: block;
     }
 
-    /* Interactive Overlay Container */
+    /* Interactive Overlay Link to Official Website */
     .canvas-overlay-link {
       position: absolute;
       inset: 0;
@@ -100,7 +119,7 @@
       width: 64.65%;
       z-index: 20;
       font-family: 'Zaslia', 'Cormorant Garamond', serif;
-      font-size: clamp(22px, 5.56vw, 80px);
+      font-size: clamp(24px, 5.56vw, 80px);
       line-height: 1.15;
       text-transform: uppercase;
       letter-spacing: 0.02em;
@@ -130,16 +149,19 @@
            alt="NaLi Spa &amp; Salon Sanctuary Reception" 
            class="sanctuary-bg-layer" />
 
-      <!-- Interactive Container -->
-      <div class="canvas-overlay-link">
+      <!-- Clickable Link leading to Full Official Website -->
+      <a href="/index.html" class="canvas-overlay-link" title="Explore NaLi Spa &amp; Salon">
         <!-- Exact Typography Layer (Lunacy Layer: "our website is on the way") -->
         <h1 class="coming-soon-text-layer">
           our website is on the way
         </h1>
-      </div>
+      </a>
 
     </div>
   </div>
+
+  <!-- Live Hot-Reload Listener for Lunacy Saves -->
+  
 
 </body>
 </html>
