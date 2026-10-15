@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NaLi Spa &amp; Salon | Coming Soon</title>
+  <meta name="description" content="NaLi Spa &amp; Salon — Luxury sanctuary of wellness, curative hydrotherapy, and holistic treatments in Freetown, Sierra Leone. Our website is on the way.">
+  <link rel="icon" type="image/png" href="assets/logo/nali-logo-official.png">
+
+  <!-- Native Font Declarations (1:1 Lunacy AST Bundled) -->
+  <style>
+    @font-face {
+      font-family: 'Zaslia';
+      src: local('Zaslia'),
+           url('assets/fonts/Zaslia.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      min-height: 100vh;
+      background-color: #141A12;
+      overflow: hidden;
+      position: relative;
+      user-select: none;
+      -webkit-user-select: none;
+      font-family: 'Zaslia', 'Cormorant Garamond', Georgia, serif;
+    }
+
+    /* Fixed Aspect Ratio Scaled Frame Container (1440 x 703) */
+    .artboard-stage {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #141A12;
+      overflow: hidden;
+    }
+
+    .artboard-canvas {
+      position: relative;
+      width: 100%;
+      max-width: 1440px;
+      aspect-ratio: 1440 / 703;
+      max-height: 100vh;
+      overflow: hidden;
+      background-color: #141A12;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Full-height viewport fallback for mobile/narrow screens */
+    @media (max-aspect-ratio: 1440/703) {
+      .artboard-canvas {
+        width: 100vw;
+        height: auto;
+        aspect-ratio: 1440 / 703;
+      }
+    }
+
+    /* Background Image: Exactly as positioned in Lunacy layer jkQKaQE0XkmdqiA9DbqRtA */
+    .sanctuary-bg-layer {
+      position: absolute;
+      left: 0;
+      top: -52.20%;
+      width: 100%;
+      height: 194.57%;
+      object-fit: cover;
+      object-position: center;
+      pointer-events: none;
+      z-index: 1;
+      display: block;
+    }
+
+    /* Interactive Overlay Container */
+    .canvas-overlay-link {
+      position: absolute;
+      inset: 0;
+      z-index: 10;
+      display: block;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* Text Layer: Exactly as styled in Lunacy Layer QL6e4JPv8ECLCds6eOXFVw */
+    .coming-soon-text-layer {
+      position: absolute;
+      left: 16.25%;
+      top: 72.69%;
+      width: 64.65%;
+      z-index: 20;
+      font-family: 'Zaslia', 'Cormorant Garamond', serif;
+      font-size: clamp(22px, 5.56vw, 80px);
+      line-height: 1.15;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      color: #FFFFFF;
+      text-align: center;
+      text-shadow: 4px 5px 8px rgba(33, 33, 31, 0.95);
+      filter: drop-shadow(4px 5px 8px rgba(33, 33, 31, 0.95));
+      pointer-events: none;
+      white-space: nowrap;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+    }
+
+    .canvas-overlay-link:hover .coming-soon-text-layer {
+      transform: scale(1.02);
+      opacity: 0.96;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1:1 Lunacy Artboard Canvas Viewport -->
+  <div class="artboard-stage">
+    <div class="artboard-canvas">
+      
+      <!-- Background Image Layer (Lunacy Layer: 1000931111.jpg / 9ecf1b3d...png) -->
+      <img src="assets/img/coming-soon-bg.png" 
+           alt="NaLi Spa &amp; Salon Sanctuary Reception" 
+           class="sanctuary-bg-layer" />
+
+      <!-- Interactive Container -->
+      <div class="canvas-overlay-link">
+        <!-- Exact Typography Layer (Lunacy Layer: "our website is on the way") -->
+        <h1 class="coming-soon-text-layer">
+          our website is on the way
+        </h1>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
