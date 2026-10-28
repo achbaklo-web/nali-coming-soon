@@ -52,7 +52,7 @@
       position: relative;
       user-select: none;
       -webkit-user-select: none;
-      font-family: 'Zaslia', 'Cormorant Garamond', Georgia, serif;
+      font-family: 'CormorantGaramond-Regular', 'Cormorant Garamond', Georgia, serif;
     }
 
     /* Fixed Aspect Ratio Scaled Frame Container (1440 x 703) */
@@ -111,30 +111,102 @@
       cursor: pointer;
     }
 
-    /* Text Layer: Exactly as styled in Lunacy Layer QL6e4JPv8ECLCds6eOXFVw */
-    .coming-soon-text-layer {
+    /* Coming Soon Content Composition: Exactly matching Reference 1 */
+    .coming-soon-center-block {
       position: absolute;
-      left: 16.25%;
-      top: 72.69%;
-      width: 64.65%;
+      left: 50%;
+      top: 48%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      max-width: 950px;
       z-index: 20;
-      font-family: 'Zaslia', 'Cormorant Garamond', serif;
-      font-size: clamp(24px, 5.56vw, 80px);
-      line-height: 1.15;
-      text-transform: uppercase;
-      letter-spacing: 0.02em;
-      color: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      text-shadow: 4px 5px 8px rgba(33, 33, 31, 0.95);
-      filter: drop-shadow(4px 5px 8px rgba(33, 33, 31, 0.95));
       pointer-events: none;
-      white-space: nowrap;
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
     }
 
-    .canvas-overlay-link:hover .coming-soon-text-layer {
-      transform: scale(1.02);
-      opacity: 0.96;
+    .canvas-overlay-link:hover .coming-soon-center-block {
+      transform: translate(-50%, -50%) scale(1.02);
+    }
+
+    /* 1. Large Luxury Headline: COMING SOON */
+    .coming-soon-headline {
+      font-family: 'Cormorant Garamond', 'Zaslia', Georgia, serif;
+      font-size: clamp(34px, 5.2vw, 68px);
+      font-weight: 300;
+      line-height: 1.1;
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      color: #FFFFFF;
+      text-indent: 0.24em; /* offset trailing letter-spacing for true center */
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7), 0 1px 4px rgba(0, 0, 0, 0.9);
+      margin-bottom: clamp(14px, 2.2vw, 24px);
+    }
+
+    /* 2. Delicate Golden Botanical Leaf Divider */
+    .leaf-divider-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      width: 100%;
+      max-width: 480px;
+      margin-bottom: clamp(16px, 2.4vw, 26px);
+    }
+
+    .leaf-line {
+      flex: 1;
+      height: 1px;
+      background: #C2A26F;
+      opacity: 0.85;
+    }
+
+    .leaf-line.line-left {
+      background: linear-gradient(90deg, rgba(194, 162, 111, 0) 0%, rgba(194, 162, 111, 0.9) 100%);
+    }
+
+    .leaf-line.line-right {
+      background: linear-gradient(90deg, rgba(194, 162, 111, 0.9) 0%, rgba(194, 162, 111, 0) 100%);
+    }
+
+    .leaf-emblem {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 22px;
+      transform: rotate(-25deg);
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+    }
+
+    .leaf-emblem svg {
+      width: 100%;
+      height: 100%;
+      stroke: #C2A26F;
+      fill: none;
+      stroke-width: 1.25;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* 3. Refined Sans-Serif Subtitle: OUR NEW WEBSITE IS ON ITS WAY */
+    .coming-soon-subheading {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-size: clamp(13px, 1.6vw, 21px);
+      font-weight: 300;
+      line-height: 1.7;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      text-indent: 0.3em;
+      color: #D9CEBF;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
     }
   </style>
 </head>
@@ -151,10 +223,27 @@
 
       <!-- Clickable Link leading to Full Official Website -->
       <a href="/index.html" class="canvas-overlay-link" title="Explore NaLi Spa &amp; Salon">
-        <!-- Exact Typography Layer (Lunacy Layer: "our website is on the way") -->
-        <h1 class="coming-soon-text-layer">
-          our website is on the way
-        </h1>
+        <!-- Reference 1 Composition: COMING SOON + Leaf Divider + Subheading -->
+        <div class="coming-soon-center-block">
+          <h1 class="coming-soon-headline">COMING SOON</h1>
+          
+          <div class="leaf-divider-wrapper" aria-hidden="true">
+            <span class="leaf-line line-left"></span>
+            <div class="leaf-emblem">
+              <svg viewBox="0 0 32 20">
+                <path d="M 2,10 C 9,2 23,2 30,10 C 23,18 9,18 2,10 Z" />
+                <line x1="2" y1="10" x2="30" y2="10" />
+                <path d="M 11,6.5 L 15,10 M 19,5.5 L 23,10 M 11,13.5 L 15,10 M 19,14.5 L 23,10" />
+              </svg>
+            </div>
+            <span class="leaf-line line-right"></span>
+          </div>
+
+          <p class="coming-soon-subheading">
+            <span>OUR NEW WEBSITE IS</span>
+            <span>ON ITS WAY</span>
+          </p>
+        </div>
       </a>
 
     </div>
